@@ -1,0 +1,206 @@
+AI-Attribution License (AIAL)
+Version 1.0, 2026
+https://github.com/aicrafted/AI-Attribution-License
+
+SPDX-License-Identifier: AIAL-1.0
+
+------------------------------------------------------------------------
+
+ABOUT THIS LICENSE
+
+This license is a permissive open-source license designed for software
+projects where some or all files were generated or assisted by artificial
+intelligence tools. It extends standard permissive licensing with
+transparent attribution of AI involvement at the file level.
+
+------------------------------------------------------------------------
+
+PART A — PROJECT-LEVEL DECLARATION (fallback default)
+
+This section applies to all files in the project that do not carry
+per-file AI attribution headers (see Part B). If all files carry
+per-file headers, this section serves as an informational summary only.
+
+  Project default authorship (check one):
+
+  [ ] Fully AI-generated   -- no human creative input in any file;
+                              no copyright claimed for any file
+  [ ] AI-assisted          -- human-directed; AI generated some or all
+                              content across files
+  [ ] Human-authored       -- AI used only as passive tooling (e.g.
+                              autocomplete); full human copyright applies
+  [ ] Mixed                -- files vary; see per-file headers (Part B)
+                              for individual file status
+
+  Project name : [Name]
+  Originator   : [Name, organization, or "AI Agent / <system name>"]
+  Year(s)      : [YYYY or YYYY-YYYY]
+  Repository   : [URL or N/A]
+
+------------------------------------------------------------------------
+
+PART B — PER-FILE AI ATTRIBUTION HEADERS (recommended; takes precedence)
+
+For any file where the project-level declaration (Part A) does not
+accurately describe that file's authorship, the distributor SHOULD add
+AI attribution tags to the file's comment header alongside standard
+SPDX tags. Per-file tags take precedence over the project-level
+declaration for that file.
+
+Syntax (place in file comment header alongside SPDX-License-Identifier):
+
+  SPDX-AI-Authorship: <value>
+  SPDX-AI-Tool: <tool name and version>
+
+Valid values for SPDX-AI-Authorship:
+
+  fully-generated   The file was produced entirely by an AI tool with
+                    no human creative input. No copyright is claimed
+                    for this file (see Condition 3 below).
+
+  ai-assisted       A human directed the work; an AI tool generated
+                    some or all of the content. Human copyright applies
+                    to the extent permitted by applicable law.
+
+  human-authored    A human wrote this file; AI was used only as a
+                    passive tool (e.g. syntax highlighting, autocomplete).
+                    Standard copyright applies; no AI disclosure required.
+
+  unknown           The AI authorship status of this file is not known
+                    (e.g. inherited from a third-party project that did
+                    not disclose AI involvement). Use in good faith.
+
+  SPDX-AI-Tool is REQUIRED when SPDX-AI-Authorship is fully-generated
+  or ai-assisted, and OPTIONAL otherwise.
+
+Example file headers:
+
+  Human-authored file (no AI disclosure needed beyond license ID):
+  ┌─────────────────────────────────────────────────────────────┐
+  │ # SPDX-FileCopyrightText: 2019 Jane Doe <jane@example.com>  │
+  │ # SPDX-License-Identifier: AIAL-1.0                         │
+  └─────────────────────────────────────────────────────────────┘
+
+  AI-assisted file:
+  ┌─────────────────────────────────────────────────────────────┐
+  │ # SPDX-FileCopyrightText: 2025 Jane Doe <jane@example.com>  │
+  │ # SPDX-License-Identifier: AIAL-1.0                         │
+  │ # SPDX-AI-Authorship: ai-assisted                           │
+  │ # SPDX-AI-Tool: Claude Sonnet 4 (Anthropic, 2025)          │
+  └─────────────────────────────────────────────────────────────┘
+
+  Fully AI-generated file (no human copyright):
+  ┌─────────────────────────────────────────────────────────────┐
+  │ # SPDX-FileCopyrightText: NONE                              │
+  │ # SPDX-License-Identifier: AIAL-1.0                         │
+  │ # SPDX-AI-Authorship: fully-generated                       │
+  │ # SPDX-AI-Tool: Claude Sonnet 4 (Anthropic, 2025)          │
+  └─────────────────────────────────────────────────────────────┘
+
+  File with unknown AI history (inherited from third-party OSS):
+  ┌─────────────────────────────────────────────────────────────┐
+  │ # SPDX-FileCopyrightText: 2022 Some Project Contributors    │
+  │ # SPDX-License-Identifier: AIAL-1.0                         │
+  │ # SPDX-AI-Authorship: unknown                               │
+  └─────────────────────────────────────────────────────────────┘
+
+  File modified by multiple AI tools over time:
+  ┌─────────────────────────────────────────────────────────────┐
+  │ # SPDX-FileCopyrightText: 2021 Jane Doe <jane@example.com>  │
+  │ # SPDX-License-Identifier: AIAL-1.0                         │
+  │ # SPDX-AI-Authorship: ai-assisted                           │
+  │ # SPDX-AI-Tool: GitHub Copilot (Microsoft, 2022)            │
+  │ # SPDX-AI-Tool: Claude Sonnet 4 (Anthropic, 2025)          │
+  └─────────────────────────────────────────────────────────────┘
+
+------------------------------------------------------------------------
+
+GRANT OF RIGHTS
+
+Permission is hereby granted, free of charge, to any person or system
+obtaining a copy of this software and associated documentation files
+(the "Software"), to deal in the Software without restriction, including
+without limitation the rights to use, copy, modify, merge, publish,
+distribute, sublicense, and/or sell copies of the Software, and to
+permit persons to whom the Software is furnished to do so, subject to
+the following conditions.
+
+------------------------------------------------------------------------
+
+CONDITIONS
+
+1. ATTRIBUTION
+   For each file distributed, either:
+   (a) the per-file AI attribution header (Part B) must be preserved,
+       where present; or
+   (b) where no per-file header is present, the project-level
+       Authorship Declaration (Part A) and this conditions notice
+       must be included in all copies or substantial portions of
+       the Software.
+
+   The AIAL version tag (SPDX-License-Identifier: AIAL-1.0 or later)
+   must be preserved in all copies.
+
+2. TRANSPARENCY
+   If the Software, or any file within it, is redistributed or used as
+   input for further AI training, the AI origin of any AI-generated or
+   AI-assisted content must not be misrepresented as purely
+   human-authored work.
+
+3. NO COPYRIGHT CLAIM (fully-generated files only)
+   For any file where SPDX-AI-Authorship is "fully-generated" (per-file
+   header) or where the project-level declaration is "Fully AI-generated"
+   and no per-file header is present:
+
+   The Originator makes no copyright claim over that file. The file is
+   dedicated to the public domain to the maximum extent permitted by
+   applicable law. Where public domain dedication is not legally possible,
+   the Originator grants a perpetual, irrevocable, royalty-free license
+   to all parties for any purpose for that file.
+
+------------------------------------------------------------------------
+
+DISCLAIMERS
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW,
+THE ORIGINATOR EXPRESSLY DISCLAIMS THAT:
+
+  (a) the Software is free of third-party intellectual property that
+      may have been embedded through AI training data;
+
+  (b) the Software meets the requirements of any law, regulation, or
+      framework governing AI-generated outputs (including but not
+      limited to the EU AI Act, US Executive Orders on AI, or
+      sector-specific regulations);
+
+  (c) the AI attribution information provided (per-file or project-level)
+      is legally sufficient to establish, transfer, or disclaim rights
+      in any specific jurisdiction — users are advised to seek
+      independent legal counsel for high-stakes deployments;
+
+  (d) the SPDX-AI-Authorship and SPDX-AI-Tool tags, as custom extensions
+      not currently part of the official SPDX specification, will be
+      recognized by all SPDX-compliant tooling.
+
+IN NO EVENT SHALL THE ORIGINATOR BE LIABLE FOR ANY CLAIM, DAMAGES, OR
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR OTHERWISE,
+ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+
+------------------------------------------------------------------------
+
+COMPATIBILITY NOTE
+
+This license is structurally compatible with the MIT License. A project
+that uses AIAL-1.0 grants the same rights as MIT. The additional
+requirements (AI attribution headers, Transparency condition) are
+attribution obligations, not restrictions on use or field of endeavor.
+
+Files in a project may be licensed under both AIAL-1.0 and another
+OSI-approved license using a compound SPDX expression:
+  SPDX-License-Identifier: AIAL-1.0 AND Apache-2.0
+
+------------------------------------------------------------------------
+
+SPDX-License-Identifier: AIAL-1.0
