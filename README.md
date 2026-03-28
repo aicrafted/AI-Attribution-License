@@ -51,8 +51,6 @@ Conservative defaults apply: absence of a declaration implies nothing. `mixed` a
 
 This is an early-stage conceptual exploration. The skeleton and spec are working drafts used to test whether the architecture is coherent before investing in polished legal text.
 
-An introductory post to the OSI `license-discuss` mailing list is being prepared to gather feedback on the overall direction.
-
 ## Author
 
 Nik the human — feedback welcome via issues.
